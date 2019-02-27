@@ -1,0 +1,17 @@
+<my-magic-header [title]="type"></my-magic-header>
+
+<section fxLayout="row wrap" id="container" fxLayoutAlign="center center">
+<ng-container *ngFor="let value of cards" >
+    <div id="imgCardDiv"
+    *ngIf="value.imageUrl"
+    fxFlex.xs="55"
+    fxFlex.sm="35"
+    fxFlex.md="25"
+    fxFlex.lg="15">
+    <img [src]="value.imageUrl"
+    id="imgCard"
+    [routerLink]='["/cards", value.id]'/>
+    </div>
+</ng-container>
+</section>
+

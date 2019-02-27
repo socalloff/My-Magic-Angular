@@ -1,0 +1,14 @@
+#imgCardDiv{
+    margin: 1em;
+}
+
+#imgCard:hover{
+    opacity: 0.8;
+}
+
+#imgCard{
+    max-height: 100% !important;
+    max-width: 100% !important;
+    cursor:pointer;
+}
+

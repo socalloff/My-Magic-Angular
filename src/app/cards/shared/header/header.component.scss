@@ -1,0 +1,7 @@
+@import "~@angular/material/theming";
+
+#matToolHeader{
+    background-color : map-get($mat-blue-grey, 300);
+    color: white;
+    margin-bottom: 1em;
+}

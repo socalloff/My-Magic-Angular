@@ -1,0 +1,8 @@
+<mat-nav-list>
+    <b class="titleTypes"><i class="material-icons">
+        crop_portrait
+        </i>TYPES DE CARTES</b>
+    <div class="marginDiv"></div>
+    <a (click)="onClickType(value)" class="itemList" mat-list-item *ngFor="let value of types" 
+    [routerLink]='["/cards", value]' routerLinkActive="active"> {{ value }} </a>
+</mat-nav-list>

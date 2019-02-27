@@ -1,0 +1,53 @@
+<mat-toolbar id="toolbar" class="mat-elevation-z9">
+    <button mat-button (click)="drawer.toggle()" id="boutonMenu">
+        <i class="material-icons">
+            menu
+        </i>
+    </button>
+    <span id="myMagicTitle" fxLayoutAlign="center" ><a class="titleApp" href="/cards">{{titleApp}}</a></span>
+    <i class="material-icons" id="dot1">
+        fiber_manual_record
+    </i>
+    <i class="material-icons" id="dot2">
+        fiber_manual_record
+    </i>
+    <i class="material-icons" id="dot3">
+        fiber_manual_record
+    </i>
+    <i class="material-icons" id="dot4">
+        fiber_manual_record
+    </i>
+    <i class="material-icons" id="dot5">
+        fiber_manual_record
+    </i>
+    
+</mat-toolbar>
+
+<mat-drawer-container class="sidenav-container">
+    <mat-drawer #drawer class="sidenav" >
+        <my-magic-type-list (onTypeSelected)="drawer.toggle()" ></my-magic-type-list>
+    </mat-drawer>
+
+    
+    <ng-container *ngIf="undefined !== query; else cardList">
+        
+        <my-magic-card *ngIf="-1 !== query.indexOf('-'); else cardList" [id]="query"></my-magic-card>
+        
+    </ng-container>
+    
+    <div class="divSpinner">
+        <mat-spinner class="spinner"  *ngIf ="isLoading" color="accent"></mat-spinner>
+    </div>
+
+</mat-drawer-container>
+
+
+
+
+
+<ng-template #cardList>
+    <my-magic-card-list   [type]="query" 
+    (onBeforeCards)="toggleLoading()" 
+    (onLoadedCards)="toggleLoading()">
+</my-magic-card-list>
+</ng-template>

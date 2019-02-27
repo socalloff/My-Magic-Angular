@@ -1,0 +1,21 @@
+@import "~@angular/material/theming";
+
+
+
+.titleTypes {
+    color: map-get($mat-grey, 900);
+}
+
+.marginDiv {
+    height: 1.5em;
+}
+
+.itemList {
+    font-weight: bolder;
+}
+
+.itemList.active{
+    background-color: map-get($mat-indigo, A400);
+    color: white;
+}
+
