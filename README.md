@@ -4,3 +4,5 @@ you can browse all cards by type.
 
 [Git page link](https://socalloff.github.io/My-Magic-Angular/www/)
 
+![My Magic gif](MyMagic.gif)
+
